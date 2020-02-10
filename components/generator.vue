@@ -3,8 +3,9 @@
   <div class="container">
     <div id="progress" :style="{width:progress}"></div>
     <div id="tst" :class="{'show-final' :showFinal}">
-      <temp name= {{ genratorSteps[1].value }} ></temp>
-    </div>
+      {{genratorSteps[0].value}}
+      <!-- <temp name= {{ genratorSteps[1].value }} ></temp> -->
+      </div>
     <div id="generate">
       <i v-if="position===0" class="previousButton fa fa-user"></i>
       <i v-else class="previousButton fa fa-arrow-left" @click="previousStep"></i>
@@ -27,13 +28,13 @@
   </div>
 </template>
 <script>
-import temp from "./Temp.vue";
+// import temp from "./Temp.vue";
 
 export default {
   name: "HelloWorld",
-  components:{
-    temp
-  },
+  // components:{
+  //   temp
+  // },
   data() {
     return {
       position: 0,
